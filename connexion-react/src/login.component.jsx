@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 const LOGIN = 'login';
 const PASSWORD = 'password';
 export default class Stars extends React.PureComponent { 

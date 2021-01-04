@@ -8,6 +8,9 @@ import { BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch } from 
 
 ReactDOM.render(
   <BrowserRouter>
+    <Switch> 
+      <Redirect exact from="/" to="/home" /> 
+    </Switch>
     <Route 
       path="/home"
       render={props => (<App />)} />
