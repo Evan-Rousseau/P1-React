@@ -8,13 +8,15 @@ import { BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch } from 
 
 ReactDOM.render(
   <BrowserRouter>
-    <Switch> 
-      <Redirect exact from="/" to="/home" /> 
-    </Switch>
+    {/* <Switch> 
+      <Redirect exact from="/home" to="/" /> 
+    </Switch> */}
     <Route 
-      path="/home"
+      exact
+      path="/"
       render={props => (<App />)} />
     <Route 
+      exact
       path="/login"
       render={props => (<Login />)} />
     
