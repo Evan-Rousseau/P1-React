@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './login.component';
+import Login from './Login';
+import Click from './Click';
 import { BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
@@ -19,6 +20,10 @@ ReactDOM.render(
       exact
       path="/login"
       render={props => (<Login />)} />
+    <Route 
+      exact
+      path="/click"
+      render={props => (<Click />)} />
     
   </BrowserRouter>,
   document.getElementById('root')

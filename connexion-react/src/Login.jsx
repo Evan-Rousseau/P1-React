@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
 const LOGIN = 'login';
 const PASSWORD = 'password';
 export default class Stars extends React.PureComponent { 
 
-    state = { login: '', } 
+    
 
     static propTypes = { 
         value: PropTypes.number.isRequired, 
         style: PropTypes.any 
     } 
-    // constructor(props) { 
-    //     super(props);
-    // } 
+    constructor(props) { 
+        super(props);
+        this.state = { login: '', password: '', redirect: null } 
+    } 
     
     render() {
         return ( 
@@ -38,6 +38,7 @@ export default class Stars extends React.PureComponent {
         let password = document.getElementById('password').value;
         if((login === LOGIN) && (password === PASSWORD)){
             alert('Successfully connected');
+            window.location.href = '/click';
         }
         else{
             alert('Connexion failed');
