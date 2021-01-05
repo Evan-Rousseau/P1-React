@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Time from './Time';
 const LOGIN = 'login';
 const PASSWORD = 'password';
 export default class Stars extends React.PureComponent { 
@@ -19,6 +20,7 @@ export default class Stars extends React.PureComponent {
         return ( 
         <div className="App">
             <header className="App-header">
+                <Time></Time>
                 <form id="loginForm" onSubmit={this.login} style={this.props.style}>
                     <span>Login: </span>
                     <input type="text" id="login" name="login"></input>
